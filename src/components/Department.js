@@ -1,12 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { push } from 'react-router-redux';
+import { useNavigate } from 'react-router-dom';
+//import { useLocation, useHistory } from "react-router-dom";
 import '../index.css';
 
 const Department = (props) => {
   const { id, name, imageUrl } = props;
+const navigate=useNavigate();
   const handleRedirectToDetails = (event) => {
-    push(`pieces/?${event.target.id}`);
+    //let history = useHistory();
+    //history.push(`/pieces/?id=${event.target.id}`);
+    const url = `/pieces/id:${event.target.id}`;
+    navigate(url);
+    //return <Navigate to={url} />;
+    //<Link to="/account?name=yahoo">Yahoo</Link>
   };
   return (
     <div role="button" className="departmentButton" tabIndex={id} onClick={handleRedirectToDetails} onKeyDown={handleRedirectToDetails}>

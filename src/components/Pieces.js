@@ -7,12 +7,12 @@ import Piece from './Piece';
 import getObjectsByDepartment from '../redux/pieces/pieceActions';
 
 const Pieces = () => {
-  const piecesCollection = useSelector((state) => state.pieceReducer);
+  const piecesCollection = useSelector((state) => state.objectsReducer);
   const dispatch = useDispatch();
-  useEffect(() => {
+  //useEffect(() => {
     const { id } = useParams();
     dispatch(getObjectsByDepartment(id));
-  }, []);
+  //}, []);
   return (
     <section className="piecesContainer">
       <button type="button" onClick={() => goBack}>Go Back</button>

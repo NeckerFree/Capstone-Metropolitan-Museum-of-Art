@@ -7,6 +7,9 @@ export default function objectsReducer(state = objectsCollection, action) {
     case GET_OBJECTS_BY_DEPARTMENT: {
       return payload;
     }
+    case GET_OBJECTS_BY_ID:{
+      return payload;
+    }
     default:
       return state;
   }
