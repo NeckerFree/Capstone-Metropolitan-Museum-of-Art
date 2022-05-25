@@ -1,6 +1,7 @@
 import { v4 as uniqueID } from 'uuid';
-import { ADD_DEPARTMENT, GET_DEPARTMENTS, REMOVE_DEPARTMENT } from './departmentTypes';
+import { ADD_DEPARTMENT, GET_DEPARTMENTS, GET_OBJECTS_BY_DEPARTMENT } from '../museumTypes';
 import ApiServices from '../../dataAccess/apiServices';
+import getImage from '../../dataAccess/departmentImages';
 
 export const createDepartment = (departmentName, description) => async (dispatch) => {
   const departmentId = uniqueID();
@@ -25,8 +26,9 @@ export const getAllDepartments = () => async (dispatch) => {
   const response = await ApiServices.getAllDepartments();
   const departments = [];
   const entries = Object.entries(response.data);
-  entries.forEach((inputEntry) => {
-    const department = Object.assign({ id: inputEntry[0] }, ...inputEntry[1]);
+  entries[0][1].forEach((inputEntry) => {
+    const imageUrl = getImage(inputEntry.departmentId);
+    const department = { ...inputEntry, imageUrl };
     departments.push(department);
   });
   dispatch({
@@ -35,10 +37,10 @@ export const getAllDepartments = () => async (dispatch) => {
   });
 };
 
-export const removeDepartment = (id) => async (dispatch) => {
-  await ApiServices.removeDepartment(id);
+export const getObjectsByDepartment = (id) => async (dispatch) => {
+  await ApiServices.getObjectsByDepartment(id);
   dispatch({
-    type: REMOVE_DEPARTMENT,
+    type: GET_OBJECTS_BY_DEPARTMENT,
     payload: id,
   });
 };

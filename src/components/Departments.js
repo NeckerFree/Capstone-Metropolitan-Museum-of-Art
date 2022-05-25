@@ -1,25 +1,27 @@
-import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
+import '../index.css';
+import Department from './Department';
+import { getAllDepartments } from '../redux/departments/departmentActions';
 
 const Departments = () => {
-  <section className="departmentsContainer" data-testid="departments-a">
-    <section className="departmentsSection">
-      {/* {
-          departmentsCollection.map((department) => {
-            alternative = !alternative;
-            return (
-              <div key={department.name}>
-                <Department
-                  id={department.id}
-                  name={department.name}
-                  description={department.description}
-                  classType={(alternative) ? 'alternative' : 'normal'}
-                  status="NOT A MEMBER"
-                />
-              </div>
-            );
-          })
-        } */}
+  const departmentsCollection = useSelector((state) => state.departmentReducer);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllDepartments());
+  }, []);
+  return (
+    <section className="departmentsContainer">
+      {departmentsCollection.map((department) => (
+        <div className="departmentElement" key={department.displayName}>
+          <Department
+            id={department.departmentId}
+            name={department.displayName}
+            imageUrl={department.imageUrl}
+          />
+        </div>
+      ))}
     </section>
-  </section>;
+  );
 };
 export default Departments;

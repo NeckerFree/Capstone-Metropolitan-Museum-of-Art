@@ -7,9 +7,6 @@ import icon from './icons/logo.png';
 import Departments from './components/Departments';
 import Details from './components/Details';
 
-const changeClass = (event) => {
-  event.target.toggleClass('active');
-};
 const App = () => (
   <Router>
     <div className="Bookstore-CMS">
@@ -17,8 +14,9 @@ const App = () => (
         <nav className="navHeader">
           <h1>Metropolitan Museum of Art</h1>
           <ul className="menu">
-            <li><Link className="nav-link" onClick={changeClass} to="/">DEPARTMENTS</Link></li>
-            <li><Link className="nav-link" onClick={changeClass} to="/categories">DETAILS</Link></li>
+            <li><Link className="nav-link" to="/">DEPARTMENTS</Link></li>
+            <li><Link className="nav-link" to="/details">DETAILS</Link></li>
+            <li><Link className="nav-link" to="/details/:id">DETAILS</Link></li>
           </ul>
           <img src={icon} alt="CMS logo" className="iconClass" />
         </nav>
