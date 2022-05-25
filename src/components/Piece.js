@@ -14,8 +14,7 @@ const Piece = (props) => {
       <div className="pieceDetail">{objectName}</div>
       <div className="pieceDetail">{medium}</div>
       <div className="pieceDetail">{artistDisplayName}</div>
-
-    </div>
+   </div>
   );
 };
 Piece.propTypes = {
