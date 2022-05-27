@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
+* {
+  --app_color_blue: #4369b2;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.buttonImageDep {
+  width: 300px;
+  cursor: grab;
+  margin: 0 auto;
+}
+
+.buttonImagePiece {
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  margin: 10px auto;
+}
+
+.departmentButton {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pieceButton {
+  width: 90%;
+  margin-top: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pieceElement {
+  flex: 20%;
+  background-color: var(--app_color_blue);
+  border: 1px solid bisque;
+  width: 300px;
+  align-items: center;
+}
+
+.piecesContainer,
+.departmentsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--app_color_blue);
+  text-align: center;
+}
+
+.departmentElement {
+  flex: 24%;
+  background-color: var(--app_color_blue);
+  border: 1px solid bisque;
+}
+
+.navHeader {
+  display: flex;
+  justify-content: center;
+}
+
+.navTitle {
+  margin: 10px;
+}
+
+.navHeader ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 20%;
+}
+
+.pageHead {
+  background-color: var(--app_color_blue);
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.searchDivPieces {
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  background-color: var(--app_color_blue);
+  width: 90%;
+}
+
+.searchDivDeparatment {
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  background-color: var(--app_color_blue);
+}
+
+.pieceDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.departmentName,
+.pieceTitle {
+  font-size: medium;
+  text-align: center;
+  color: white;
+  font-style: normal;
+}
+
+.objectName,
+.medium {
+  text-align: left;
+  color: white;
+  font-size: smaller;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+.artist,
+.objectsCount {
+  font-style: oblique;
+  color: white;
+  font-size: small;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.backButton {
+  margin: 10px 10px;
+}
+
+.backButton img {
+  height: 15px;
+}
+
+.pieceDescription {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 10px;
+}
+
+.iconClass {
+  width: 30px;
+  padding-right: 20px;
+}
