@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import '../index.css';
 import getObjectsByDepartment from '../redux/objectsIds/objectsIdsActions';
 import Piece from './Piece';
@@ -8,14 +8,19 @@ import backImage from '../icons/back.png';
 
 const Pieces = () => {
   const [search, setSearch] = useState('');
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const piecesDetail = useSelector((state) => state.objectsReducer);
   const { id } = useParams();
 
   useEffect(() => {
-    dispatch(getObjectsByDepartment(id));
+    if (!piecesDetail.length) {
+      dispatch(getObjectsByDepartment(id));
+    }
   }, []);
+
+  const handleBack = () => {
+    window.location.href = '/';
+  };
 
   const filteredPieces = piecesDetail.filter((piece) => piece.title
     .toLowerCase().includes(search.toLowerCase()));
@@ -28,7 +33,7 @@ const Pieces = () => {
     <section className="pageContainer">
       <h3>Pieces</h3>
       <div className="pageHead">
-        <button type="button" className="backButton" tabIndex={id} onClick={() => navigate(-1)} onKeyDown={() => navigate(-1)}>
+        <button type="button" className="backButton" tabIndex={id} onClick={handleBack} onKeyDown={handleBack}>
           <img src={backImage} alt="back" />
         </button>
         <div className="searchDivPieces">

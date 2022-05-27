@@ -43,6 +43,21 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/NeckerFree/Capstone-Metropolitan-Museum-of-Art/issues).
 
+## Acknowledgments
+
+# Design:
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+
+# Metropolitan Museum API:
+<p xmlns:dct="http://purl.org/dc/terms/">
+<a rel="license" href="http://creativecommons.org/publicdomain/mark/1.0/">
+<img src="http://i.creativecommons.org/p/mark/1.0/88x31.png"
+     style="border-style: none;" alt="Public Domain Mark" />
+</a>
+<br />
+This work (<span property="dct:title">Capstone-Metropolitan-Museum-of-Art</span>, by <a href="https://github.com/NeckerFree/Capstone-Metropolitan-Museum-of-Art" rel="dct:creator"><span property="dct:title">Elio Cortés</span></a>), identified by <a href="https://neckerfree.github.io/Portfolio" rel="dct:publisher"><span property="dct:title">Elio Cortés</span></a>, is free of known copyright restrictions.
+</p>
+
 ## Show your support
 
 Give a ⭐️ if you like this project!

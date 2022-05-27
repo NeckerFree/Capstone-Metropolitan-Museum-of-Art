@@ -10,8 +10,8 @@ const Departments = () => {
   const departmentsCollection = useSelector((state) => state.departmentReducer);
 
   useEffect(() => {
-    if (!departmentsCollection.lenght) dispatch(getAllDepartments());
-  }, [dispatch]);
+    dispatch(getAllDepartments());
+  }, []);
 
   const filteredDepartments = departmentsCollection.filter((department) => department.displayName
     .toLowerCase().includes(search.toLowerCase()));
