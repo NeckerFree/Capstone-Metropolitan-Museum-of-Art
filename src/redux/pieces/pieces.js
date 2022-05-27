@@ -1,14 +1,11 @@
-import { GET_OBJECTS_BY_DEPARTMENT } from '../museumTypes';
+import MuseumTypes from '../museumTypes';
 
-const objectsCollection = [];
-export default function objectsReducer(state = objectsCollection, action) {
+const piecesCollection = [];
+export default function piecesReducer(state = piecesCollection, action) {
   const { type, payload } = action;
   switch (type) {
-    case GET_OBJECTS_BY_DEPARTMENT: {
-      return payload;
-    }
-    case GET_OBJECTS_BY_ID:{
-      return payload;
+    case MuseumTypes.GET_PIECE_BY_ID: {
+      return { ...payload };
     }
     default:
       return state;

@@ -1,29 +1,27 @@
 import React from 'react';
 import './index.css';
-import {
-  BrowserRouter, Routes, Route, NavLink as Link,
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MetaTags from 'react-meta-tags';
 import icon from './icons/logo.png';
 import Departments from './components/Departments';
 import Pieces from './components/Pieces';
 
 const App = () => (
   <BrowserRouter>
-    <div className="Bookstore-CMS">
+    <MetaTags>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </MetaTags>
+    <div className="Initial" data-testid="app-1">
       <div className="panel-bg">
-        <nav className="navHeader">
-          <h1>Metropolitan Museum of Art</h1>
-          <ul className="menu">
-            <li><Link className="nav-link" to="/">DEPARTMENTS</Link></li>
-            <li><Link className="nav-link" to="/pieces">PIECES</Link></li>
-          </ul>
-          <img src={icon} alt="CMS logo" className="iconClass" />
-        </nav>
-        <Routes>
-          <Route path="/" element={<Departments />} />
-          <Route path="/pieces/:id" element={<Pieces />} />
-        </Routes>
+        <h1 className="navTitle">
+          <img src={icon} alt="MET logo" className="iconClass" />
+          Metropolitan Museum of Art
+        </h1>
       </div>
+      <Routes>
+        <Route path="/" element={<Departments />} />
+        <Route path="/pieces/:id" element={<Pieces />} />
+      </Routes>
     </div>
   </BrowserRouter>
 );

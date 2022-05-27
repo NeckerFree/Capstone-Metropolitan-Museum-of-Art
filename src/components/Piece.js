@@ -4,21 +4,25 @@ import '../index.css';
 
 const Piece = (props) => {
   const {
-    objectID, primaryImage, title, artistDisplayName, objectName, medium,
+    objectId, primaryImage, title, artistDisplayName, objectName, medium,
   } = props;
 
   return (
     <div className="pieceButton">
-      <img id={objectID} src={primaryImage} className="buttonImage" alt={title} />
-      <div className="pieceDetail">{title}</div>
-      <div className="pieceDetail">{objectName}</div>
-      <div className="pieceDetail">{medium}</div>
-      <div className="pieceDetail">{artistDisplayName}</div>
-   </div>
+      <img id={objectId} src={primaryImage} className="buttonImagePiece" alt={title} />
+      <div className="pieceDetail">
+        <div className="pieceTitle">{title}</div>
+        <div className="artist">{artistDisplayName}</div>
+        <div className="pieceDescription">
+          <div className="objectName">{objectName}</div>
+          <div className="medium">{medium}</div>
+        </div>
+      </div>
+    </div>
   );
 };
 Piece.propTypes = {
-  objectID: PropTypes.number.isRequired,
+  objectId: PropTypes.number.isRequired,
   primaryImage: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   artistDisplayName: PropTypes.string.isRequired,
