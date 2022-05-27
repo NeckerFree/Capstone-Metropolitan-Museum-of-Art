@@ -14,7 +14,7 @@
 
 [Live Demo](https://metropolitan-museum-art.netlify.app/)
 
-[Presentation Video](https://metropolitan-museum-art.netlify.app/](https://www.loom.com/share/bac52279e53944ecae882a6c7b4c2688)
+[Presentation Video](https://www.loom.com/share/bac52279e53944ecae882a6c7b4c2688)
 
 ## Getting Started
 
