@@ -1,10 +1,10 @@
 [](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Space Travellers Hub
+# Capstone project: Metropolitan Museum Art (NY)
 
 
-> Real live data from the SpaceX API, this is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space departments.
-
+> Real live data from Metropolitan-Museum-of-Art API (https://metmuseum.github.io/), this web application let to filtered
+ data using using React-Redux. 
 
 ## Built With
 
@@ -13,6 +13,8 @@
 ## Live Demo (if available)
 
 [Live Demo](https://metropolitan-museum-art.netlify.app/)
+
+[Presentation Video]([https://metropolitan-museum-art.netlify.app/](https://www.loom.com/share/bac52279e53944ecae882a6c7b4c2688)
 
 ## Getting Started
 
