@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato');
+
 * {
   --app_color_blue: #4369b2;
 }
@@ -12,9 +13,8 @@ body {
 
 .buttonImageDep {
   width: 300px;
-  padding: auto;
   cursor: grab;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 .buttonImagePiece {
@@ -41,8 +41,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0px auto;
-  /* text-align: center; */
 }
 
 .pieceElement {
@@ -67,89 +65,93 @@ body {
   border: 1px solid bisque;
 }
 
-.departmentElement {
-  flex: 20%;
-  background-color: var(--app_color_blue);
-  border: 1px solid bisque;
-}
-
-´
 .navHeader {
   display: flex;
   justify-content: center;
 }
 
-.navTitle{
+.navTitle {
   margin: 10px;
-} 
+}
+
 .navHeader ul {
   display: flex;
   justify-content: space-between;
   list-style: none;
   width: 20%;
 }
-.pageHead{
+
+.pageHead {
   background-color: var(--app_color_blue);
   display: flex;
   text-align: center;
- justify-content:space-between;
+  justify-content: space-between;
 }
+
 .searchDivPieces {
-  margin: 0px, auto;
-  padding: 10px 0px; 
+  margin: 0;
+  padding: 10px 0;
   text-align: center;
   background-color: var(--app_color_blue);
   width: 90%;
 }
 
-.searchDivDeparatment{
-  margin: 0px, auto;
-  padding: 10px 0px; 
+.searchDivDeparatment {
+  margin: 0;
+  padding: 10px 0;
   text-align: center;
   background-color: var(--app_color_blue);
 }
-.pieceDetail{
+
+.pieceDetail {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
+  margin-bottom: 30px;
 }
 
-.departmentName, .pieceTitle{
-  font-size:x-large;
+.departmentName,
+.pieceTitle {
+  font-size: medium;
   text-align: center;
-  color:white;
-  font-size:medium;
-  font-style:normal;
-} 
-
-.objectName, .medium{
-  text-align: left;
-  color:white;
-  font-size:smaller;
-  font-style:italic;
+  color: white;
+  font-style: normal;
 }
 
-.artist, .objectsCount{
+.objectName,
+.medium {
   text-align: left;
+  color: white;
+  font-size: smaller;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+.artist,
+.objectsCount {
   font-style: oblique;
-  color:white;
+  color: white;
+  font-size: small;
+  margin-left: 20px;
   text-align: center;
-  font-size:small;
 }
 
-.backButton{
-  margin: 10px 10px; 
- }
- .backButton img{
+.backButton {
+  margin: 10px 10px;
+}
+
+.backButton img {
   height: 15px;
- }
- .pieceDescription{
-   display: flex;
-   justify-content:space-around;
- }
- .iconClass{
-   width: 30px;
-   padding-right: 20px;
- }
- 
+}
+
+.pieceDescription {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 10px;
+}
+
+.iconClass {
+  width: 30px;
+  padding-right: 20px;
+}
