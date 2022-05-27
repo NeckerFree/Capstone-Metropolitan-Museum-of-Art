@@ -14,8 +14,6 @@
 
 [Live Demo](https://metropolitan-museum-art.netlify.app/)
 
-[Presentation Video](https://www.loom.com/share/bac52279e53944ecae882a6c7b4c2688)
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
